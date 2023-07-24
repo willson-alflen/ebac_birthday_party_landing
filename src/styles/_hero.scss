@@ -1,0 +1,137 @@
+@import "custom-variables";
+
+#hero {
+  .navbar {
+    padding: 20px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    
+    a,
+    li > a {
+      font-size: $fs-small;
+    }
+
+    .navbar-toggler-icon {
+      font-size: $fs-normal;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: 0 0 0 0.15rem;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 0 80px;
+
+    &__image {
+      width: 60%;
+      margin-bottom: 60px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      &__title {
+        text-align: right;
+
+        h2 {
+          font-size: 2.2rem;
+          margin-bottom: 0;
+          line-height: 1;
+
+          span {
+            color: $bg-clr;
+            font-weight: 700;
+          }
+        }
+
+        p {
+          span {
+            color: $bg-clr;
+            font-weight: 700;
+          }
+        }
+      }
+
+      &__highlight {
+        color: $bg-clr;
+        font-size: $fs-medium;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      &__address {
+        text-align: center;
+
+        p {
+          font-size: $fs-small;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #hero {
+    .navbar {
+      a,
+      li > a {
+        font-size: $fs-normal;
+      }
+    }
+
+    .description {
+      &__image {
+        width: 75%;
+      }
+
+      &__text {
+        &__title {
+          h2 {
+            font-size: 2.5rem;
+          }
+        }
+
+        &__highlight {
+          font-size: 1.5rem;
+        }
+
+        &__address {
+          p {
+            font-size: $fs-normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #hero {
+    .description {
+      flex-direction: row;
+
+      &__image {
+        width: 40%;
+      }
+
+      &__text {
+        &__address {
+          text-align: right;
+        }
+      }
+
+     
+    }
+  }
+}
