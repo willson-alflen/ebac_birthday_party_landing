@@ -1,0 +1,51 @@
+@import "custom-variables";
+
+#confirm-presence {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form {
+    color: $text-color-alt;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    padding: 40px 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+
+    &__title {
+      font-size: $fs-medium;
+      font-weight: bold;
+    }
+
+    &__subtitle {
+      font-size: $fs-small;
+    }
+
+    #btn-cancel {
+      background-color: $bg-clr-alt;
+      border-color: $bg-clr-alt;
+      color: $text-color-alt;
+      width: 120px;
+    }
+
+    #btn-confirm {
+      background-color: $bg-clr;
+      border-color: $bg-clr;
+      color: $text-color-alt;
+      width: 120px;
+    }
+  }
+}
